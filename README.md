@@ -4,6 +4,25 @@
 
 苍穹（firmament）：AI量化交易系统
 
+## 项目简介
+
+基于JDK8、SpringBoot、MongoDB、AI Model 的AI量化交易系统
+Node 20.0.1
+目前完成了MVP的版本，项目拆分为2个部分：分别是后端系统（当前项目）和前端系统（firmament-ui）
+
+## 快速启动
+
+1. 启动MongoDB
+2. 启动后端系统，注意，你需要开启代理，可以修改 [FirmamentApplication.java](admin%2Fadmin-web%2Fsrc%2Fmain%2Fjava%2Fcn%2Forg%2Fultronai%2Ffirmament%2Fadmin%2Fweb%2FFirmamentApplication.java)
+的配置
+3. 启动前端系统
+4. 注册账号（账户名需为admin，代表为管理员）管理员身份可以在[application.yml](admin%2Fadmin-web%2Fsrc%2Fmain%2Fresources%2Fapplication.yml)进行配置，以英文,分隔
+5. 注册账号之后登录，进入系统首页，配置AI模型、配置通知模型、配置提示词、配置实时AI交易、即可查看订单
+
+## 提示词指标
+
+目前提示词指标只写死了：EMA、MACD、RSI 如果你想要更多的指标，可以自行计算开发即可（作者时间有限～）
+
 ## 项目内置指标概述
 
 本项目提供了全面的金融市场技术指标计算功能，包括趋势类、动能类、波动率类、成交量类和其他价格衍生指标。所有指标都基于OHLCV(开盘价、最高价、最低价、收盘价、成交量)
@@ -11,47 +30,16 @@
 
 ## 支持的指标列表
 
-### 趋势类指标
+内置指标基于：基于Ta4j 详细的指标列表参见官方文档！ https://github.com/ta4j/ta4j-wiki
 
-- **SMA (Simple Moving Average)** - 简单移动平均线
-- **EMA (Exponential Moving Average)** - 指数移动平均线
-- **WMA (Weighted Moving Average)** - 加权移动平均线
-- **MACD (Moving Average Convergence Divergence)** - 移动平均线收敛发散指标
-- **ADX (Average Directional Index)** - 平均趋向指数
-- **Ichimoku Cloud** - 一目均衡云
-- **HMA (Hull Moving Average)** - Hull移动平均线
-- **KAMA (Kaufman Adaptive Moving Average)** - 卡夫曼自适应均线
+## 设计思想
 
-### 动能类指标
+通过实时获取交易所的数据，通过本地指标计算出来结果，然后将订单数据和账户数据提供给AI模型，根据AI模型的决策进行订单管理，完全依靠AI进行风控、订单管理。
 
-- **RSI (Relative Strength Index)** - 相对强弱指数
-- **Stochastic Oscillator** - 随机指标
-- **Stochastic RSI** - 随机RSI
-- **CCI (Commodity Channel Index)** - 商品通道指数
-- **Williams %R** - 威廉指标
-- **ROC (Rate of Change)** - 变化率指标
-- **TRIX** - 三重指数平滑均线变化率
+## 未来功能
 
-### 波动率类指标
-
-- **Bollinger Bands** - 布林带
-- **ATR (Average True Range)** - 平均真实波动范围
-- **Donchian Channel** - 唐奇安通道
-- **Keltner Channel** - 肯特纳通道
-
-### 成交量类指标
-
-- **OBV (On-Balance Volume)** - 能量潮
-- **VWAP (Volume Weighted Average Price)** - 成交量加权平均价
-- **MFI (Money Flow Index)** - 资金流量指数
-- **Accumulation/Distribution** - 累积/派发指标
-- **Chaikin Money Flow** - 蔡金资金流向
-
-### 其他价格衍生指标
-
-- **Pivot Points** - 枢轴点
-- **Fibonacci Retracement** - 斐波那契回调
-- **Parabolic SAR** - 抛物线转向指标
-- **Median Price** - 中间价
-- **Typical Price** - 典型价格
-- **Weighted Close** - 加权收盘价
+支持更多的AI模型接入
+支持更多交易所接入
+支持交易所API接入
+支持本地策略（基于Ta4j开发更多指标）
+支持AI回测和本地策略回测

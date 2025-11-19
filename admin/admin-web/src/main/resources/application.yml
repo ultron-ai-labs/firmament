@@ -1,0 +1,27 @@
+#  环境
+env: test
+
+# 管理员账号id
+admin: admin
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 7777
+  servlet:
+    context-path: /
+
+logging:
+  config: classpath:log4j2.xml
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  resources:
+    static-locations: classpath:static/,file:static/
+  mvc:
+    static-path-pattern: /**
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/firmament
