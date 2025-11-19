@@ -36,6 +36,18 @@ Node 20.0.1
 
 通过实时获取交易所的数据，通过本地指标计算出来结果，然后将订单数据和账户数据提供给AI模型，根据AI模型的决策进行订单管理，完全依靠AI进行风控、订单管理。
 
+## 后台运行图如下
+
+![index.png](static%2Fimages%2Findex.png)
+![personalCenter.png](static%2Fimages%2FpersonalCenter.png)
+![alarm.png](static%2Fimages%2Falarm.png)
+![aimodel.png](static%2Fimages%2Faimodel.png)
+![prompt.png](static%2Fimages%2Fprompt.png)
+![aiTrading_1.png](static%2Fimages%2FaiTrading_1.png)
+![aiTrading_2.png](static%2Fimages%2FaiTrading_2.png)
+![aiTrading_3.png](static%2Fimages%2FaiTrading_3.png)
+![aiTrading_4.png](static%2Fimages%2FaiTrading_4.png)
+
 ## 未来功能
 
 支持更多的AI模型接入

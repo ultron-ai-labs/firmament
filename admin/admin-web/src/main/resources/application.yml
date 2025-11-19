@@ -2,7 +2,7 @@
 env: test
 
 # 管理员账号id
-admin: admin
+admin: admin,icanci
 server:
   tomcat:
     uri-encoding: UTF-8

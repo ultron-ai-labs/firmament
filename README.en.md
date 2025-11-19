@@ -38,6 +38,18 @@ Built in indicators are based on Ta4j. For a detailed list of indicators, please
 
 By obtaining real-time data from the exchange, calculating results through local indicators, and providing order and account data to AI models, order management is carried out based on AI model decisions, relying entirely on AI for risk control and order management.
 
+## The backend operation diagram is as follows
+
+![index.png](static%2Fimages%2Findex.png)
+![personalCenter.png](static%2Fimages%2FpersonalCenter.png)
+![alarm.png](static%2Fimages%2Falarm.png)
+![aimodel.png](static%2Fimages%2Faimodel.png)
+![prompt.png](static%2Fimages%2Fprompt.png)
+![aiTrading_1.png](static%2Fimages%2FaiTrading_1.png)
+![aiTrading_2.png](static%2Fimages%2FaiTrading_2.png)
+![aiTrading_3.png](static%2Fimages%2FaiTrading_3.png)
+![aiTrading_4.png](static%2Fimages%2FaiTrading_4.png)
+
 ## Future functions
 
 Support more AI model integration
