@@ -52,8 +52,8 @@ By obtaining real-time data from the exchange, calculating results through local
 
 ## Future functions
 
-Support more AI model integration
-Support access to more exchanges
-Support API access to exchanges
-Support local strategies (develop more metrics based on Ta4j)
-Support AI backtesting and local strategy backtesting
+- Support more AI model integration
+- Support access to more exchanges
+- Support API access to exchanges
+- Support local strategies (develop more metrics based on Ta4j)
+- Support AI backtesting and local strategy backtesting
